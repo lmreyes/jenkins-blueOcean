@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Inicio') {
       steps {
-        echo 'Inicio'
+        echo 'Inicio modificado'
       }
     }
     stage('Test') {
