@@ -9,7 +9,7 @@ pipeline {
     stage('build && SonarQube analysis') {
       steps {
         withMaven(maven:'Maven 3.3.9') {
-          cd example
+          sh 'cd example'
           sh 'mvn clean package sonar:sonar'
         }
       }
