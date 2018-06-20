@@ -7,8 +7,10 @@ pipeline {
       }
     }
     stage('SonarQube analysis') {
-      withSonarQubeEnv('My SonarQube Server') {
-        sh 'mvn org.sonarsource.scanner.maven:sonar-maven-plugin:RELEASE:sonar'
+      steps {
+        withMaven('build && SonarQube analysis') {
+         sh 'mvn org.sonarsource.scanner.maven:sonar-maven-plugin:RELEASE:sonar'
+        }
       }
     }	
     stage('Test') {
