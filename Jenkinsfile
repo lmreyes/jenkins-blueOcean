@@ -25,7 +25,9 @@ pipeline {
     }	
     stage('Test') {
       steps {
-        echo 'Tests'
+	dir('example') {
+          sh 'mvn clean test'
+	}
       }
     }
     stage('Fin') {
