@@ -6,7 +6,7 @@ pipeline {
         echo 'Inicio modificado'
       }
     }
-    stage('build && SonarQube analysis') {
+    stage('Build && SonarQube analysis') {
       steps {
         withSonarQubeEnv('Sonar') {
           dir('example'){
