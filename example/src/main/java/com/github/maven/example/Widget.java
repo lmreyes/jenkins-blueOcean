@@ -1,7 +1,7 @@
 package com.github.maven.example;
 
 /**
- * Simple wigdet class that can be enabled or disabled
+ * Simple wigdet class that can be enabled or disabled --
  */
 public class Widget {
 
